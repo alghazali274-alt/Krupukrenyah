@@ -1,0 +1,714 @@
+```html
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KrupukBisaMendesain - Jasa Desain Grafis Profesional & Kreatif</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        darkbg: '#09090b',
+                        darkcard: '#121216',
+                        darkborder: '#27272a',
+                        pinkbrand: {
+                            50: '#fdf2f8',
+                            100: '#fce7f3',
+                            200: '#fbcfe8',
+                            300: '#f9a8d4',
+                            400: '#f472b6',
+                            500: '#ec4899',
+                            600: '#db2777',
+                            700: '#be185d',
+                            800: '#9d174d',
+                            900: '#831843'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-text {
+            background: linear-gradient(135deg, #EC4899 0%, #F43F5E 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .pink-border-card {
+            border: 1px solid #27272a;
+            background: #121216;
+            box-shadow: 0 4px 20px -2px rgba(236, 72, 153, 0.05);
+            transition: all 0.3s ease;
+        }
+        .pink-border-card:hover {
+            border-color: #EC4899;
+            box-shadow: 0 0 25px rgba(236, 72, 153, 0.25);
+            transform: translateY(-4px);
+        }
+        .glow-pink-strong {
+            border-color: #EC4899;
+            box-shadow: 0 0 30px rgba(236, 72, 153, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-darkbg text-slate-100 font-sans antialiased selection:bg-pink-500 selection:text-white">
+
+    <!-- Toast Notification -->
+    <div id="toast" class="fixed bottom-5 right-5 z-50 transform translate-y-20 opacity-0 transition-all duration-300 bg-pink-600 text-white px-5 py-3 rounded-2xl shadow-2xl flex items-center gap-3 border border-pink-400">
+        <i class="fa-solid fa-circle-check text-xl"></i>
+        <span id="toast-message">Nomor berhasil disalin!</span>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-40 bg-darkbg/80 backdrop-blur-md border-b border-zinc-800 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-pink-600 to-rose-500 flex items-center justify-center font-bold text-white shadow-lg shadow-pink-500/30 group-hover:scale-105 transition">
+                    <i class="fa-solid fa-wand-magic-sparkles text-lg"></i>
+                </div>
+                <span class="text-xl font-black tracking-tight text-white">Krupuk<span class="gradient-text">BisaMendesain</span></span>
+            </a>
+            
+            <div class="hidden md:flex items-center gap-8 font-semibold text-zinc-400 text-sm">
+                <a href="#layanan" class="hover:text-pink-400 transition">Layanan & Harga</a>
+                <a href="#order" class="hover:text-pink-400 transition">Form Order</a>
+                <a href="#alur" class="hover:text-pink-400 transition">Cara Order</a>
+                <a href="#pembayaran" class="hover:text-pink-400 transition">Pembayaran</a>
+                <a href="#faq" class="hover:text-pink-400 transition">FAQ</a>
+            </div>
+
+            <a href="#order" class="hidden sm:inline-flex items-center justify-center px-6 py-2.5 rounded-full bg-gradient-to-r from-pink-500 to-rose-500 text-white font-bold text-sm shadow-md shadow-pink-500/20 hover:shadow-pink-500/40 hover:scale-105 transition duration-200">
+                <i class="fa-brands fa-whatsapp text-lg mr-2"></i> Order WA
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 md:pt-44 md:pb-28 overflow-hidden bg-gradient-to-b from-zinc-950 via-darkbg to-zinc-950">
+        <!-- Ambient Glow Backdrops -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-pink-600/15 rounded-full blur-[160px] pointer-events-none"></div>
+        <div class="absolute top-1/3 right-5 w-80 h-80 bg-rose-600/10 rounded-full blur-[120px] pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-pink-950/60 border border-pink-500/30 text-pink-300 text-xs sm:text-sm font-semibold mb-8 shadow-sm">
+                <span class="flex h-2.5 w-2.5 rounded-full bg-pink-500 animate-ping"></span>
+                <span>Siap Bikin Desainmu Makin Estetik & Menjual</span>
+            </div>
+
+            <h1 class="text-4xl sm:text-6xl md:text-7xl font-black tracking-tight text-white mb-6 leading-tight">
+                Solusi Desain Kreatif Tanpa Ribet Bersama <br class="hidden sm:block">
+                <span class="gradient-text">KrupukBisaMendesain</span>
+            </h1>
+
+            <p class="max-w-2xl mx-auto text-base sm:text-lg text-zinc-400 mb-10 leading-relaxed font-normal">
+                Jasa desain grafis profesional dengan tampilan gelap nan modern, pengerjaan serba cepat, dan garansi revisi sampai pas!
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#order" class="w-full sm:w-auto px-8 py-4 rounded-2xl bg-gradient-to-r from-pink-500 to-rose-500 text-white font-bold text-base shadow-xl shadow-pink-500/25 hover:shadow-pink-500/40 hover:scale-105 transition duration-200 flex items-center justify-center gap-3">
+                    <i class="fa-brands fa-whatsapp text-xl"></i> Order via WhatsApp
+                </a>
+                <a href="#layanan" class="w-full sm:w-auto px-8 py-4 rounded-2xl bg-zinc-900 border border-zinc-700 text-zinc-300 hover:text-white hover:border-pink-500 font-bold text-base transition duration-200 flex items-center justify-center gap-2 shadow-sm">
+                    <i class="fa-solid fa-list-check text-pink-400"></i> Lihat Daftar Harga
+                </a>
+            </div>
+
+            <!-- Stats Badge -->
+            <div class="mt-16 pt-10 border-t border-zinc-800 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div class="p-4 rounded-2xl bg-darkcard border border-zinc-800 shadow-sm">
+                    <p class="text-3xl font-black text-pink-500">500+</p>
+                    <p class="text-zinc-400 text-xs sm:text-sm font-medium mt-1">Project Selesai</p>
+                </div>
+                <div class="p-4 rounded-2xl bg-darkcard border border-zinc-800 shadow-sm">
+                    <p class="text-3xl font-black text-pink-500">99%</p>
+                    <p class="text-zinc-400 text-xs sm:text-sm font-medium mt-1">Klien Puas</p>
+                </div>
+                <div class="p-4 rounded-2xl bg-darkcard border border-zinc-800 shadow-sm">
+                    <p class="text-3xl font-black text-pink-500">1-2 Hari</p>
+                    <p class="text-zinc-400 text-xs sm:text-sm font-medium mt-1">Pengerjaan Kilat</p>
+                </div>
+                <div class="p-4 rounded-2xl bg-darkcard border border-zinc-800 shadow-sm">
+                    <p class="text-3xl font-black text-pink-500">Free</p>
+                    <p class="text-zinc-400 text-xs sm:text-sm font-medium mt-1">Konsultasi Brief</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services & Pricelist Section -->
+    <section id="layanan" class="py-20 relative bg-darkbg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-extrabold tracking-widest text-pink-500 uppercase mb-2">Pricelist Layanan</h2>
+                <p class="text-3xl sm:text-4xl font-black text-white">Pilih Paket Desain Sesuai Kebutuhanmu</p>
+                <p class="text-zinc-400 mt-3 text-sm sm:text-base">Harga terjangkau, kualitas estetik profesional, langsung jadi!</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Package 1: Logo & Branding -->
+                <div class="pink-border-card glow-pink-strong rounded-3xl p-8 flex flex-col justify-between relative">
+                    <div class="absolute -top-3.5 right-6 bg-gradient-to-r from-pink-500 to-rose-500 text-white text-xs font-black px-4 py-1 rounded-full uppercase tracking-wider shadow-md">
+                        Terfavorit
+                    </div>
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-pink-950/80 border border-pink-500/30 text-pink-400 flex items-center justify-center text-2xl mb-6 font-bold">
+                            <i class="fa-solid fa-pen-nib"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Desain Logo</h3>
+                        <p class="text-zinc-400 text-sm mb-6">Identitas visual profesional untuk brand baru atau rebrand bisnis agar makin kredibel.</p>
+                        <div class="mb-6 p-4 rounded-2xl bg-zinc-900 border border-zinc-800">
+                            <span class="text-xs text-zinc-400 font-medium">Harga Spesial</span>
+                            <div class="text-3xl font-black text-pink-400 mt-1">Rp 150.000 <span class="text-xs font-normal text-zinc-400">/ paket</span></div>
+                        </div>
+                        <ul class="space-y-3 text-sm text-zinc-300 mb-8 font-medium">
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-pink-500"></i> Konsep Logo Modern</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-pink-500"></i> File Master Scalable (AI, EPS, PNG, PDF)</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-pink-500"></i> Preview Mockup Realistis</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-clock text-pink-400"></i> Estimasi 1 - 2 Hari</li>
+                        </ul>
+                    </div>
+                    <button onclick="selectPackage('Desain Logo')" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-pink-500 to-rose-500 hover:from-pink-600 hover:to-rose-600 text-white font-bold transition duration-200 shadow-lg shadow-pink-500/20">
+                        Pilih Layanan
+                    </button>
+                </div>
+
+                <!-- Package 2: Social Media Content -->
+                <div class="pink-border-card rounded-3xl p-8 flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-pink-950/80 border border-pink-500/30 text-pink-400 flex items-center justify-center text-2xl mb-6">
+                            <i class="fa-solid fa-hashtag"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Social Media Content</h3>
+                        <p class="text-zinc-400 text-sm mb-6">Feeds Instagram, Carousel, Story & Banner promosi digital yang memikat.</p>
+                        <div class="mb-6 p-4 rounded-2xl bg-zinc-900 border border-zinc-800">
+                            <span class="text-xs text-zinc-400 font-medium">Mulai dari</span>
+                            <div class="text-3xl font-black text-white mt-1">Rp 100.000 <span class="text-xs font-normal text-zinc-400">/ paket</span></div>
+                        </div>
+                        <ul class="space-y-3 text-sm text-zinc-300 mb-8 font-medium">
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-pink-500"></i> Single Feed / Carousel Post</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-pink-500"></i> Format High Quality (PNG/JPG)</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-pink-500"></i> Bebas Pilih Tema & Warna</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-clock text-pink-400"></i> Estimasi 1 - 2 Hari</li>
+                        </ul>
+                    </div>
+                    <button onclick="selectPackage('Desain Konten Social Media')" class="w-full py-3.5 rounded-xl bg-zinc-800 hover:bg-pink-600 hover:text-white text-zinc-200 font-bold transition duration-200 border border-zinc-700">
+                        Pilih Layanan
+                    </button>
+                </div>
+
+                <!-- Package 3: Banner & Poster -->
+                <div class="pink-border-card rounded-3xl p-8 flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-pink-950/80 border border-pink-500/30 text-pink-400 flex items-center justify-center text-2xl mb-6">
+                            <i class="fa-solid fa-scroll"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Banner & Poster</h3>
+                        <p class="text-zinc-400 text-sm mb-6">Poster acara, spanduk fisik, baliho, hingga pamflet promosi offline & online.</p>
+                        <div class="mb-6 p-4 rounded-2xl bg-zinc-900 border border-zinc-800">
+                            <span class="text-xs text-zinc-400 font-medium">Mulai dari</span>
+                            <div class="text-3xl font-black text-white mt-1">Rp 120.000 <span class="text-xs font-normal text-zinc-400">/ desain</span></div>
+                        </div>
+                        <ul class="space-y-3 text-sm text-zinc-300 mb-8 font-medium">
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-pink-500"></i> Ukuran Custom Ready Print</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-pink-500"></i> Format CMYK / RGB High Res</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-pink-500"></i> Gratis Revisi Mayor</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-clock text-pink-400"></i> Estimasi 1 - 3 Hari</li>
+                        </ul>
+                    </div>
+                    <button onclick="selectPackage('Banner & Poster Promosi')" class="w-full py-3.5 rounded-xl bg-zinc-800 hover:bg-pink-600 hover:text-white text-zinc-200 font-bold transition duration-200 border border-zinc-700">
+                        Pilih Layanan
+                    </button>
+                </div>
+
+                <!-- Package 4: Packaging / Kemasan -->
+                <div class="pink-border-card rounded-3xl p-8 flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-pink-950/80 border border-pink-500/30 text-pink-400 flex items-center justify-center text-2xl mb-6">
+                            <i class="fa-solid fa-box-open"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Packaging / Kemasan</h3>
+                        <p class="text-zinc-400 text-sm mb-6">Desain box kemasan makanan/minuman, stiker label, dan pouch kekinian.</p>
+                        <div class="mb-6 p-4 rounded-2xl bg-zinc-900 border border-zinc-800">
+                            <span class="text-xs text-zinc-400 font-medium">Mulai dari</span>
+                            <div class="text-3xl font-black text-white mt-1">Rp 250.000 <span class="text-xs font-normal text-zinc-400">/ desain</span></div>
+                        </div>
+                        <ul class="space-y-3 text-sm text-zinc-300 mb-8 font-medium">
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-pink-500"></i> Pola Potong (Dieline) Siap Cetak</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-pink-500"></i> Visual 3D Realistic Mockup</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-pink-500"></i> File Master Vector (AI/PDF)</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-clock text-pink-400"></i> Estimasi 2 - 4 Hari</li>
+                        </ul>
+                    </div>
+                    <button onclick="selectPackage('Packaging / Kemasan')" class="w-full py-3.5 rounded-xl bg-zinc-800 hover:bg-pink-600 hover:text-white text-zinc-200 font-bold transition duration-200 border border-zinc-700">
+                        Pilih Layanan
+                    </button>
+                </div>
+
+                <!-- Package 5: Merchandise & Kaos -->
+                <div class="pink-border-card rounded-3xl p-8 flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-pink-950/80 border border-pink-500/30 text-pink-400 flex items-center justify-center text-2xl mb-6">
+                            <i class="fa-solid fa-shirt"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Merchandise & Kaos</h3>
+                        <p class="text-zinc-400 text-sm mb-6">Desain sablon kaos, hoodie, totebag, gantungan kunci, & souvenir brand.</p>
+                        <div class="mb-6 p-4 rounded-2xl bg-zinc-900 border border-zinc-800">
+                            <span class="text-xs text-zinc-400 font-medium">Mulai dari</span>
+                            <div class="text-3xl font-black text-white mt-1">Rp 150.000 <span class="text-xs font-normal text-zinc-400">/ desain</span></div>
+                        </div>
+                        <ul class="space-y-3 text-sm text-zinc-300 mb-8 font-medium">
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-pink-500"></i> Master File Sablon (PNG/Vector)</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-pink-500"></i> Visual Mockup Kaos/Pakaian</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-pink-500"></i> Separasi Warna Jika Perlu</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-clock text-pink-400"></i> Estimasi 1 - 3 Hari</li>
+                        </ul>
+                    </div>
+                    <button onclick="selectPackage('Merchandise & Kaos')" class="w-full py-3.5 rounded-xl bg-zinc-800 hover:bg-pink-600 hover:text-white text-zinc-200 font-bold transition duration-200 border border-zinc-700">
+                        Pilih Layanan
+                    </button>
+                </div>
+
+                <!-- Package 6: Sport Design -->
+                <div class="pink-border-card rounded-3xl p-8 flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-pink-950/80 border border-pink-500/30 text-pink-400 flex items-center justify-center text-2xl mb-6">
+                            <i class="fa-solid fa-trophy"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Sport Design</h3>
+                        <p class="text-zinc-400 text-sm mb-6">Matchday poster, visual player, jersey mockup, & pamflet event olahraga.</p>
+                        <div class="mb-6 p-4 rounded-2xl bg-zinc-900 border border-zinc-800">
+                            <span class="text-xs text-zinc-400 font-medium">Mulai dari</span>
+                            <div class="text-3xl font-black text-white mt-1">Rp 180.000 <span class="text-xs font-normal text-zinc-400">/ desain</span></div>
+                        </div>
+                        <ul class="space-y-3 text-sm text-zinc-300 mb-8 font-medium">
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-pink-500"></i> Matchday Poster & Player Visual</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-pink-500"></i> Apparel / Jersey Mockup</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-pink-500"></i> Style Energetik & Dynamic</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-clock text-pink-400"></i> Estimasi 1 - 3 Hari</li>
+                        </ul>
+                    </div>
+                    <button onclick="selectPackage('Sport Design')" class="w-full py-3.5 rounded-xl bg-zinc-800 hover:bg-pink-600 hover:text-white text-zinc-200 font-bold transition duration-200 border border-zinc-700">
+                        Pilih Layanan
+                    </button>
+                </div>
+
+                <!-- Package 7: UI/UX Design -->
+                <div class="pink-border-card rounded-3xl p-8 flex flex-col justify-between md:col-span-2 lg:col-span-1">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-pink-950/80 border border-pink-500/30 text-pink-400 flex items-center justify-center text-2xl mb-6">
+                            <i class="fa-solid fa-mobile-screen-button"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">UI/UX Design</h3>
+                        <p class="text-zinc-400 text-sm mb-6">Tampilan layar website & aplikasi mobile modern, interaktif, serta ramah pengguna.</p>
+                        <div class="mb-6 p-4 rounded-2xl bg-zinc-900 border border-zinc-800">
+                            <span class="text-xs text-zinc-400 font-medium">Mulai dari</span>
+                            <div class="text-3xl font-black text-white mt-1">Rp 400.000 <span class="text-xs font-normal text-zinc-400">/ screen</span></div>
+                        </div>
+                        <ul class="space-y-3 text-sm text-zinc-300 mb-8 font-medium">
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-pink-500"></i> Desain Figma (Mobile / Web App)</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-pink-500"></i> Interactive Prototype Figma</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-pink-500"></i> Styleguide & Assets Export</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-clock text-pink-400"></i> Estimasi 1 - 5 Hari</li>
+                        </ul>
+                    </div>
+                    <button onclick="selectPackage('UI/UX Design')" class="w-full py-3.5 rounded-xl bg-zinc-800 hover:bg-pink-600 hover:text-white text-zinc-200 font-bold transition duration-200 border border-zinc-700">
+                        Pilih Layanan
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Ordering Form Section -->
+    <section id="order" class="py-20 relative bg-zinc-950 border-t border-zinc-800">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-xs font-extrabold tracking-widest text-pink-500 uppercase mb-2">Form Order WhatsApp</h2>
+                <p class="text-3xl font-black text-white">Isi Detail & Langsung Kirim Ke WhatsApp</p>
+                <p class="text-zinc-400 text-sm mt-2">Sistem kami memformat pesananmu secara rapi!</p>
+            </div>
+
+            <div class="bg-darkcard border border-zinc-800 rounded-3xl p-6 sm:p-10 shadow-2xl relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-64 h-64 bg-pink-500/5 rounded-full blur-3xl pointer-events-none"></div>
+
+                <form id="orderForm" onsubmit="generateWA(event)" class="space-y-6 relative z-10">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <!-- Nama Lengkap -->
+                        <div>
+                            <label class="block text-sm font-semibold text-zinc-300 mb-2">Nama Lengkap / Brand <span class="text-pink-500">*</span></label>
+                            <input type="text" id="orderName" required placeholder="Contoh: Budi (Krupuk Pedas)" class="w-full bg-zinc-900 border border-zinc-700 focus:border-pink-500 focus:ring-2 focus:ring-pink-500/20 rounded-2xl px-4 py-3.5 text-white placeholder-zinc-500 outline-none transition font-medium">
+                        </div>
+
+                        <!-- Jenis Desain -->
+                        <div>
+                            <label class="block text-sm font-semibold text-zinc-300 mb-2">Jenis Desain <span class="text-pink-500">*</span></label>
+                            <select id="orderType" required class="w-full bg-zinc-900 border border-zinc-700 focus:border-pink-500 focus:ring-2 focus:ring-pink-500/20 rounded-2xl px-4 py-3.5 text-white outline-none transition font-medium">
+                                <option value="" class="bg-zinc-900">-- Pilih Jenis Desain --</option>
+                                <option value="Desain Logo" class="bg-zinc-900">Desain Logo (Rp 150.000)</option>
+                                <option value="Desain Konten Social Media" class="bg-zinc-900">Desain Konten Social Media (Rp 100.000)</option>
+                                <option value="Banner & Poster Promosi" class="bg-zinc-900">Banner & Poster Promosi (Rp 120.000)</option>
+                                <option value="Packaging / Kemasan" class="bg-zinc-900">Packaging / Kemasan (Rp 250.000)</option>
+                                <option value="Merchandise & Kaos" class="bg-zinc-900">Merchandise & Kaos (Rp 150.000)</option>
+                                <option value="Sport Design" class="bg-zinc-900">Sport Design (Rp 180.000)</option>
+                                <option value="UI/UX Design" class="bg-zinc-900">UI/UX Design (Rp 400.000)</option>
+                                <option value="Custom Design Lainnya" class="bg-zinc-900">Custom Design Lainnya</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Target Deadline & Metode Pembayaran -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-semibold text-zinc-300 mb-2">Target Deadline <span class="text-pink-500">*</span></label>
+                            <input type="date" id="orderDeadline" required class="w-full bg-zinc-900 border border-zinc-700 focus:border-pink-500 focus:ring-2 focus:ring-pink-500/20 rounded-2xl px-4 py-3.5 text-white outline-none transition font-medium">
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-semibold text-zinc-300 mb-2">Pilihan Pembayaran <span class="text-pink-500">*</span></label>
+                            <select id="orderPayment" required class="w-full bg-zinc-900 border border-zinc-700 focus:border-pink-500 focus:ring-2 focus:ring-pink-500/20 rounded-2xl px-4 py-3.5 text-white outline-none transition font-medium">
+                                <option value="Transfer Bank BCA" class="bg-zinc-900">Transfer Bank BCA</option>
+                                <option value="Transfer Bank Mandiri" class="bg-zinc-900">Transfer Bank Mandiri</option>
+                                <option value="Transfer Bank BRI" class="bg-zinc-900">Transfer Bank BRI</option>
+                                <option value="E-Wallet (DANA)" class="bg-zinc-900">E-Wallet (DANA)</option>
+                                <option value="E-Wallet (OVO)" class="bg-zinc-900">E-Wallet (OVO)</option>
+                                <option value="E-Wallet (ShopeePay)" class="bg-zinc-900">E-Wallet (ShopeePay)</option>
+                                <option value="E-Wallet (GoPay)" class="bg-zinc-900">E-Wallet (GoPay)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Deskripsi / Brief -->
+                    <div>
+                        <label class="block text-sm font-semibold text-zinc-300 mb-2">Deskripsi Brief Desain <span class="text-pink-500">*</span></label>
+                        <textarea id="orderBrief" rows="4" required placeholder="Tuliskan teks yang dimasukkan, ide/konsep, warna kesukaan, atau link referensi gambar..." class="w-full bg-zinc-900 border border-zinc-700 focus:border-pink-500 focus:ring-2 focus:ring-pink-500/20 rounded-2xl px-4 py-3.5 text-white placeholder-zinc-500 outline-none transition font-medium"></textarea>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="w-full py-4 rounded-2xl bg-gradient-to-r from-pink-500 to-rose-500 hover:from-pink-600 hover:to-rose-600 text-white font-black text-lg shadow-xl shadow-pink-500/20 hover:shadow-pink-500/40 transition duration-200 flex items-center justify-center gap-3">
+                        <i class="fa-brands fa-whatsapp text-2xl"></i> Kirim Order via WhatsApp
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- How it Works Section -->
+    <section id="alur" class="py-20 bg-darkbg border-y border-zinc-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-extrabold tracking-widest text-pink-500 uppercase mb-2">Alur Kerja</h2>
+                <p class="text-3xl font-black text-white">4 Langkah Praktis Pesan Desain</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                
+                <!-- Step 1 -->
+                <div class="text-center group">
+                    <div class="w-16 h-16 rounded-2xl bg-zinc-900 border border-zinc-700 text-pink-400 font-black text-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:bg-pink-500 group-hover:text-white transition duration-300 shadow-lg">
+                        1
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Kirim Brief</h3>
+                    <p class="text-zinc-400 text-sm">Isi form di website ini lalu otomatis kirim detailnya ke WhatsApp kami.</p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="text-center group">
+                    <div class="w-16 h-16 rounded-2xl bg-zinc-900 border border-zinc-700 text-pink-400 font-black text-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:bg-pink-500 group-hover:text-white transition duration-300 shadow-lg">
+                        2
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Diskusi & DP</h3>
+                    <p class="text-zinc-400 text-sm">Konsultasikan ide secara detail, lalu lakukan DP ringan (50%).</p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="text-center group">
+                    <div class="w-16 h-16 rounded-2xl bg-zinc-900 border border-zinc-700 text-pink-400 font-black text-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:bg-pink-500 group-hover:text-white transition duration-300 shadow-lg">
+                        3
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Pengerjaan & Revisi</h3>
+                    <p class="text-zinc-400 text-sm">Tim kami membuatkan sampel awal. Kamu berhak mengajukan revisi.</p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="text-center group">
+                    <div class="w-16 h-16 rounded-2xl bg-zinc-900 border border-zinc-700 text-pink-400 font-black text-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:bg-pink-500 group-hover:text-white transition duration-300 shadow-lg">
+                        4
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Pelunasan & File HD</h3>
+                    <p class="text-zinc-400 text-sm">Setelah desain FIX, lakukan pelunasan & dapatkan semua master file HD!</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Payment Methods Section -->
+    <section id="pembayaran" class="py-20 bg-zinc-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-extrabold tracking-widest text-pink-500 uppercase mb-2">Pilihan Pembayaran</h2>
+                <p class="text-3xl font-black text-white">Transfer Bank & E-Wallet Praktis</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                
+                <!-- Bank Transfer -->
+                <div class="bg-darkcard border border-zinc-800 rounded-3xl p-6 sm:p-8 shadow-sm">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 rounded-xl bg-pink-950 border border-pink-500/30 text-pink-400 flex items-center justify-center text-xl">
+                            <i class="fa-solid fa-building-columns"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">Transfer Bank</h3>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <!-- BCA -->
+                        <div class="bg-zinc-900/80 p-4 rounded-2xl flex items-center justify-between border border-zinc-800">
+                            <div>
+                                <p class="text-xs text-pink-400 font-bold uppercase">Bank BCA</p>
+                                <p class="text-lg font-mono font-bold text-white tracking-wider">1234-5678-90</p>
+                                <p class="text-xs text-zinc-400">a.n. KrupukBisaMendesain</p>
+                            </div>
+                            <button onclick="copyToClipboard('1234567890', 'Nomor BCA')" class="px-4 py-2 bg-zinc-800 hover:bg-pink-600 hover:text-white border border-zinc-700 text-pink-400 text-xs font-bold rounded-xl transition shadow-sm">
+                                <i class="fa-regular fa-copy mr-1"></i> Salin
+                            </button>
+                        </div>
+
+                        <!-- Mandiri -->
+                        <div class="bg-zinc-900/80 p-4 rounded-2xl flex items-center justify-between border border-zinc-800">
+                            <div>
+                                <p class="text-xs text-pink-400 font-bold uppercase">Bank Mandiri</p>
+                                <p class="text-lg font-mono font-bold text-white tracking-wider">137-00-1234567-8</p>
+                                <p class="text-xs text-zinc-400">a.n. KrupukBisaMendesain</p>
+                            </div>
+                            <button onclick="copyToClipboard('1370012345678', 'Nomor Mandiri')" class="px-4 py-2 bg-zinc-800 hover:bg-pink-600 hover:text-white border border-zinc-700 text-pink-400 text-xs font-bold rounded-xl transition shadow-sm">
+                                <i class="fa-regular fa-copy mr-1"></i> Salin
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- E-Wallet -->
+                <div class="bg-darkcard border border-zinc-800 rounded-3xl p-6 sm:p-8 shadow-sm">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 rounded-xl bg-pink-950 border border-pink-500/30 text-pink-400 flex items-center justify-center text-xl">
+                            <i class="fa-solid fa-wallet"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">E-Wallet & QRIS</h3>
+                    </div>
+
+                    <div class="space-y-4">
+                        <!-- GoPay / OVO / DANA / ShopeePay -->
+                        <div class="bg-zinc-900/80 p-4 rounded-2xl flex items-center justify-between border border-zinc-800">
+                            <div>
+                                <p class="text-xs text-pink-400 font-bold uppercase">DANA / OVO / ShopeePay / GoPay</p>
+                                <p class="text-lg font-mono font-bold text-white tracking-wider">0822-4028-0730</p>
+                                <p class="text-xs text-zinc-400">a.n. KrupukBisaMendesain</p>
+                            </div>
+                            <button onclick="copyToClipboard('082240280730', 'Nomor E-Wallet')" class="px-4 py-2 bg-zinc-800 hover:bg-pink-600 hover:text-white border border-zinc-700 text-pink-400 text-xs font-bold rounded-xl transition shadow-sm">
+                                <i class="fa-regular fa-copy mr-1"></i> Salin
+                            </button>
+                        </div>
+
+                        <!-- QRIS Box -->
+                        <div class="bg-zinc-900/40 p-4 rounded-2xl border border-zinc-800 text-center">
+                            <p class="text-xs text-pink-400 font-bold uppercase mb-2">Scan QRIS All Payment</p>
+                            <div class="bg-white p-2.5 inline-block rounded-2xl border border-zinc-700 shadow-md">
+                                <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=KrupukBisaMendesainPayment" alt="QRIS Payment" class="w-24 h-24 mx-auto">
+                            </div>
+                            <p class="text-xs text-zinc-400 mt-2">Dukungan QRIS All Payment Bank & E-Wallet.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-20 bg-darkbg">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-xs font-extrabold tracking-widest text-pink-500 uppercase mb-2">Pertanyaan Populer</h2>
+                <p class="text-3xl font-black text-white">FAQ KrupukBisaMendesain</p>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="border border-zinc-800 rounded-2xl overflow-hidden bg-darkcard shadow-sm">
+                    <button onclick="toggleFaq(this)" class="w-full p-5 text-left font-bold text-white flex justify-between items-center hover:bg-zinc-900 transition">
+                        <span>Berapa lama proses pengerjaan desain?</span>
+                        <i class="fa-solid fa-chevron-down text-pink-400 transition-transform duration-200"></i>
+                    </button>
+                    <div class="px-5 pb-5 text-zinc-400 text-sm hidden border-t border-zinc-800/60 pt-3">
+                        Rata-rata pengerjaan 1 hingga 3 hari kerja tergantung jenis desain. Untuk paket UI/UX atau Packaging berkisar 1-5 hari.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="border border-zinc-800 rounded-2xl overflow-hidden bg-darkcard shadow-sm">
+                    <button onclick="toggleFaq(this)" class="w-full p-5 text-left font-bold text-white flex justify-between items-center hover:bg-zinc-900 transition">
+                        <span>Format file apa saja yang akan saya terima?</span>
+                        <i class="fa-solid fa-chevron-down text-pink-400 transition-transform duration-200"></i>
+                    </button>
+                    <div class="px-5 pb-5 text-zinc-400 text-sm hidden border-t border-zinc-800/60 pt-3">
+                        Kamu menerima file siap pakai High Quality (PNG Transparan, JPG, PDF Siap Cetak) serta File Mentah (AI, EPS, PSD, Figma).
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="border border-zinc-800 rounded-2xl overflow-hidden bg-darkcard shadow-sm">
+                    <button onclick="toggleFaq(this)" class="w-full p-5 text-left font-bold text-white flex justify-between items-center hover:bg-zinc-900 transition">
+                        <span>Apakah ada garansi revisi jika kurang sesuai?</span>
+                        <i class="fa-solid fa-chevron-down text-pink-400 transition-transform duration-200"></i>
+                    </button>
+                    <div class="px-5 pb-5 text-zinc-400 text-sm hidden border-t border-zinc-800/60 pt-3">
+                        Tentu saja! Setiap pemesanan mencakup revisi gratis hingga hasil desain benar-benar pas dengan keinginanmu.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-zinc-950 text-white pt-16 pb-12 border-t border-zinc-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+                <div class="md:col-span-2">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-pink-500 to-rose-400 flex items-center justify-center font-bold text-white shadow-lg shadow-pink-500/30">
+                            <i class="fa-solid fa-wand-magic-sparkles text-lg"></i>
+                        </div>
+                        <span class="text-xl font-black tracking-tight text-white">Krupuk<span class="text-pink-400">BisaMendesain</span></span>
+                    </div>
+                    <p class="text-zinc-400 text-sm max-w-sm mb-6">
+                        Partner desain grafis kreatif serba ada berpenampilan modern. Siap bantu percepat branding & promosi bisnismu!
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-zinc-900 border border-zinc-800 flex items-center justify-center text-zinc-400 hover:text-pink-400 hover:border-pink-500 transition"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-zinc-900 border border-zinc-800 flex items-center justify-center text-zinc-400 hover:text-pink-400 hover:border-pink-500 transition"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-zinc-900 border border-zinc-800 flex items-center justify-center text-zinc-400 hover:text-pink-400 hover:border-pink-500 transition"><i class="fa-brands fa-behance"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-4">Navigasi</h4>
+                    <ul class="space-y-2 text-sm text-zinc-400">
+                        <li><a href="#layanan" class="hover:text-pink-400 transition">Daftar Harga</a></li>
+                        <li><a href="#order" class="hover:text-pink-400 transition">Formulir WA</a></li>
+                        <li><a href="#alur" class="hover:text-pink-400 transition">Cara Pemesanan</a></li>
+                        <li><a href="#pembayaran" class="hover:text-pink-400 transition">Pembayaran</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-4">Kontak Kami</h4>
+                    <ul class="space-y-3 text-sm text-zinc-400">
+                        <li class="flex items-center gap-3"><i class="fa-brands fa-whatsapp text-emerald-400 text-lg"></i> +62 822-4028-0730</li>
+                        <li class="flex items-center gap-3"><i class="fa-regular fa-envelope text-pink-400"></i> halo@krupukbisamendesain.id</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-clock text-rose-400"></i> Setiap Hari (08.00 - 21.00 WIB)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-zinc-900 pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-zinc-500">
+                <p>&copy; 2026 KrupukBisaMendesain. All rights reserved.</p>
+                <p class="mt-2 sm:mt-0">Dibuat dengan sentuhan kreatif Dark Mode ✨</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Logic -->
+    <script>
+        const TARGET_WA_NUMBER = "6282240280730";
+
+        function selectPackage(packageName) {
+            const orderTypeSelect = document.getElementById('orderType');
+            if (orderTypeSelect) {
+                orderTypeSelect.value = packageName;
+            }
+            document.getElementById('order').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function generateWA(event) {
+            event.preventDefault();
+
+            const name = document.getElementById('orderName').value;
+            const type = document.getElementById('orderType').value;
+            const deadline = document.getElementById('orderDeadline').value;
+            const payment = document.getElementById('orderPayment').value;
+            const brief = document.getElementById('orderBrief').value;
+
+            const message = `Halo *KrupukBisaMendesain*! Saya mau order jasa desain nih:
+
+📌 *DETAIL PEMESANAN DESAIN*
+• *Nama / Brand:* ${name}
+• *Jenis Desain:* ${type}
+• *Target Deadline:* ${deadline}
+• *Metode Pembayaran:* ${payment}
+
+📝 *Brief / Kebutuhan Desain:*
+"${brief}"
+
+Mohon dicek dan diinfokan rinciannya ya kak. Terima kasih!`;
+
+            const encodedMessage = encodeURIComponent(message);
+            const waUrl = `https://wa.me/${TARGET_WA_NUMBER}?text=${encodedMessage}`;
+
+            window.open(waUrl, '_blank');
+        }
+
+        function copyToClipboard(text, label) {
+            const tempInput = document.createElement('input');
+            tempInput.value = text;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempInput);
+
+            showToast(`${label} (${text}) berhasil disalin!`);
+        }
+
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            const toastMessage = document.getElementById('toast-message');
+            toastMessage.textContent = msg;
+
+            toast.classList.remove('translate-y-20', 'opacity-0');
+            toast.classList.add('translate-y-0', 'opacity-100');
+
+            setTimeout(() => {
+                toast.classList.remove('translate-y-0', 'opacity-100');
+                toast.classList.add('translate-y-20', 'opacity-0');
+            }, 3000);
+        }
+
+        function toggleFaq(button) {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('i');
+
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                icon.classList.add('rotate-180');
+            } else {
+                content.classList.add('hidden');
+                icon.classList.remove('rotate-180');
+            }
+        }
+    </script>
+</body>
+</html>
+```
